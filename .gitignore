@@ -1,0 +1,12 @@
+egs/lj/exp
+egs/lj/LJSpeech1.1
+*.log
+*.pyc
+__pycache__/
+*/__pycache__/
+*.zip
+*/*.zip
+source/
+make.bat
+Makefile
+*.swp
