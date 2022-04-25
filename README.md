@@ -1,8 +1,9 @@
 # Bilateral Denoising Diffusion Models (BDDMs)
 
-[![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2203.13508)
 [![GitHub Stars](https://img.shields.io/github/stars/tencent-ailab/bddm?style=social)](https://github.com/tencent-ailab/bddm)
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=tencent-ailab/bddm)
+[![arXiv](https://img.shields.io/badge/arXiv-Paper-green.svg)](https://arxiv.org/abs/2203.13508)
+[![demo](https://img.shields.io/badge/demo-Samples-orange.svg)](https://bilateral-denoising-diffusion-model.github.io)
 ![Gradio](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)
 ![Colab](https://colab.research.google.com/assets/colab-badge.svg)
 
