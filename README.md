@@ -41,7 +41,7 @@ To try BDDM on your own dataset, simply clone this repo in your local machine pr
 - [pystoi](https://github.com/mpariente/pystoi)==0.3.3
 - [pypesq](https://github.com/youngjamespark/python-pypesq)==0.2.0
 
-### I. Data Preparation and Configuraion ### 
+### Step I. Data Preparation and Configuraion ### 
 
 Download the [LJSpeech](https://keithito.com/LJ-Speech-Dataset/) dataset.
 
@@ -49,7 +49,7 @@ For training, we first need to setup a file **conf.yml** for configuring the dat
 
 **Note:** Appropriately modify the paths in ```"train_data_dir"``` and ```"valid_data_dir"``` for training; and the path in ```"gen_data_dir"``` for sampling. All dir paths should be link to a directory that store the waveform audios (in **.wav**) or the Mel-spectrogram files (in **.mel**).
 
-### II. Training a Schedule Network ###
+### Step II. Training a Schedule Network ###
 
 Suppose that a well-trained score network (theta) is stored at ```$theta_path```, we start by modifying ```"load": $theta_path``` in **conf.yml**.
 
@@ -62,7 +62,7 @@ sh train.sh 0 conf.yml
 
 **Note**: In practice, we found that **10K** training steps would be enough to obtain a promising scheduling network. This normally takes no more than half an hour for training with one GPU.
 
-### III. Searching for Noise Schedules ###
+### Step III. Searching for Noise Schedules ###
 
 Given a well-trained BDDM (theta, phi), we can now run the noise scheduling algorithm to find the best schedule (optimizing the trade-off between quality and speed).
 
@@ -75,7 +75,7 @@ After setting the maximum number of sampling steps in scheduling (```"N"```), we
 sh schedule.sh 0 conf.yml
 ```
 
-### IV. Evaluation or Generation ###
+### Step IV. Evaluation or Generation ###
 
 For evaluation, we set ```"gen_data_dir"``` in ```conf.yml``` to the path of a directory that stores the test set of audios (in ```.wav```).
 
