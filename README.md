@@ -18,15 +18,16 @@ This is the official PyTorch implementation of the following paper:
 
 ![BDDM](bddm.png)
 
-This implementation supports model training and audio generation, and also provides the pre-trained models for the benchmark [LJSpeech](https://keithito.com/LJ-Speech-Dataset/) dataset.
+This implementation supports model training and audio generation, and also provides the pre-trained models for the benchmark [LJSpeech](https://keithito.com/LJ-Speech-Dataset/) and [VCTK](https://datashare.ed.ac.uk/handle/10283/2651) dataset.
 
 Visit our [demo page](https://bilateral-denoising-diffusion-model.github.io) for audio samples.
 
 ### Recipes:
 
-- (Option 1) To directly generate samples using BDDM, we provide a checkpoint pre-trained on LJSpeech at ```egs/lj/DiffWave-GALR.pkl``` (the relevant config can be found at ```egs/lj/conf.yml```). **(Start from Step III.)**
+- (Option 1) To train the BDDM scheduling network yourself, you can download the pre-trained score network from [philsyn/DiffWave-Vocoder](https://github.com/philsyn/DiffWave-Vocoder/blob/master/exp/ch128_T200_betaT0.02/logs/checkpoint/1000000.pkl) (provided at ```egs/lj/DiffWave.pkl```), and follow the training steps below. **(Start from Step I.)**
+- (Option 2) To search for noise schedules using BDDM, we provide a pre-trained BDDM for LJSpeech at ```egs/lj/DiffWave-GALR.pkl``` and for VCTK at ```egs/vctk/DiffWave-GALR.pkl``` . **(Start from Step III.)**
+- (Option 3) To directly generate samples using BDDM, we provide the searched schedules for LJSpeech at ```egs/lj/noise_schedules``` and for VCTK at ```egs/vctk/noise_schedules``` (check ```conf.yml``` for the respective configurations). **(Start from Step IV.)**
 
-- (Option 2) To train the BDDM scheduling network yourself, you can download the pre-trained score network from [philsyn/DiffWave-Vocoder](https://github.com/philsyn/DiffWave-Vocoder/blob/master/exp/ch128_T200_betaT0.02/logs/checkpoint/1000000.pkl) (provided at ```egs/lj/DiffWave.pkl```), and follow the training steps below.
 
 ## Getting Started
 
