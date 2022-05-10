@@ -3,7 +3,7 @@ exp_dir: './exp'
 seed: 0
 load: 'DiffWave_GALR.pkl'
 # Generation config
-sampling_noise_schedule: 'exp/DiffWave-GALR_conf-hash-8ff58/noise_schedules/12steps_PESQ4.07_STOI0.978.ns'
+sampling_noise_schedule: './noise_schedules/12steps_PESQ4.07_STOI0.978.ns'
 gen_data_dir: "./demo_case"
 #gen_data_dir: "./test_wavs"
 use_ddim_steps: 0 # options: 0-DDPM, 1-DDIM, M-DDIM M steps (when noise schedule is not given)

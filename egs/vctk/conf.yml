@@ -1,0 +1,65 @@
+# General config
+exp_dir: './exp'
+seed: 0
+load: 'DiffWave_GALR.pkl'
+# Generation config
+sampling_noise_schedule: './noise_schedules/8steps_PESQ3.88_STOI0.987.ns'
+gen_data_dir: "./demo_case"
+#gen_data_dir: "./test_wavs"
+use_ddim_steps: 0 # options: 0-DDPM, 1-DDIM, M-DDIM M steps (when noise schedule is not given)
+# Diffusion config
+T: 200
+beta_0: 0.0001
+beta_T: 0.02
+tau: 25
+# Noise scheduling config
+N: 8
+bddm_search_bins: 9
+noise_scheduling_attempts: 10
+# Score network config
+score_net: 'DiffWave'
+num_res_layers: 30
+in_channels: 1
+res_channels: 128
+skip_channels: 128
+dilation_cycle: 10
+out_channels: 1
+diffusion_step_embed_dim_in: 128
+diffusion_step_embed_dim_mid: 512
+diffusion_step_embed_dim_out: 512
+# Schedule network config
+schedule_net: 'GALR'
+blocks: 1
+hidden_dim: 128
+input_dim: 128
+window_length: 8
+segment_size: 64
+# Trainer config
+resume_training: False
+save_fp16: True
+steps_per_epoch: 1000
+score_net_training_steps: 5000000
+schedule_net_training_steps: 5000
+lr: 0.00001
+freeze_checkpoint_params: False # only used when provided load path
+save_generated_dir: 'gen_wav'
+batch_size: 1
+patience: 100
+grad_clip: 5.0
+weight_decay: 0.00001
+log_period: 1
+bmuf_block_momentum: 0.5
+bmuf_block_lr: 0.7
+bmuf_sync_period: 2
+ema_rate: 0.999
+# Data config
+train_data_dir: "VCTK-Corpus/wav"
+valid_data_dir: "val_case"
+n_worker: 10
+sampling_rate: 22050
+seg_len: 16000
+fil_len: 1024
+hop_len: 256
+win_len: 1024
+mel_fmin: 0.0
+mel_fmax: 8000.0
