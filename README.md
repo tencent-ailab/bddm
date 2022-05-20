@@ -4,8 +4,6 @@
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=tencent-ailab/bddm)
 [![arXiv](https://img.shields.io/badge/arXiv-Paper-green.svg)](https://arxiv.org/abs/2203.13508)
 [![demo](https://img.shields.io/badge/demo-Samples-orange.svg)](https://bilateral-denoising-diffusion-model.github.io)
-![Gradio](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)
-![Colab](https://colab.research.google.com/assets/colab-badge.svg)
 
 This is the official PyTorch implementation of the following paper:
 
@@ -22,7 +20,11 @@ This implementation supports model training and audio generation, and also provi
 
 Visit our [demo page](https://bilateral-denoising-diffusion-model.github.io) for audio samples.
 
-**Update:** We recently released our follow-up work FastDiff [here](https://github.com/Rongjiehuang/FastDiff), where the speed-and-quality trade-off is further optimized for the speech synthesis tasks.
+### Updates:
+- **May 20, 2021:** Released our follow-up work [FastDiff](https://github.com/Rongjiehuang/FastDiff) on GitHub, where we futher optimized the speed-and-quality trade-off.
+- **May 10, 2021:** Added the experiment configurations and model checkpoints for the VCTK dataset.
+- **May 9, 2021:** Added the searched noise schedules for the LJSpeech and VCTK datasets.
+- **March 20, 2021:** Released the PyTorch implementation of BDDM with pre-trained models for the LJSpeech dataset.
 
 ### Recipes:
 
