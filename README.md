@@ -22,6 +22,8 @@ This implementation supports model training and audio generation, and also provi
 
 Visit our [demo page](https://bilateral-denoising-diffusion-model.github.io) for audio samples.
 
+**Update:** We recently released our follow-up work FastDiff [here](https://github.com/Rongjiehuang/FastDiff), where the speed-and-quality trade-off is further optimized for the speech synthesis tasks.
+
 ### Recipes:
 
 - (Option 1) To train the BDDM scheduling network yourself, you can download the pre-trained score network from [philsyn/DiffWave-Vocoder](https://github.com/philsyn/DiffWave-Vocoder/blob/master/exp/ch128_T200_betaT0.02/logs/checkpoint/1000000.pkl) (provided at ```egs/lj/DiffWave.pkl```), and follow the training steps below. **(Start from Step I.)**
