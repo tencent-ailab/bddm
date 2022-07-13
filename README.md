@@ -61,7 +61,7 @@ Suppose that a well-trained score network (theta) is stored at ```$theta_path```
 After modifying the relevant hyperparameters for a schedule network (especially ```"tau"```), we can train the schedule network (f_phi in paper) using:
 
 ```bash
-# Training on device 0
+# Training on device 0 (supports multi-GPU training)
 sh train.sh 0 conf.yml
 ```
 
@@ -76,7 +76,7 @@ First, we set ```"load"``` in ```conf.yml``` to the path of the trained BDDM.
 After setting the maximum number of sampling steps in scheduling (```"N"```), we run:
 
 ```bash
-# Scheduling on device 0
+# Scheduling on device 0 (only supports single-GPU scheduling)
 sh schedule.sh 0 conf.yml
 ```
 
@@ -89,7 +89,7 @@ For generation, we set ```"gen_data_dir"``` in ```conf.yml``` to the path of a d
 Then, we run:
 
 ```bash
-# Generation/evaluation on device 0 (only support single-GPU scheduling)
+# Generation/evaluation on device 0 (only supports single-GPU generation)
 sh generate.sh 0 conf.yml
 ```
 
